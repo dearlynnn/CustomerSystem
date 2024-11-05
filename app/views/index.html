@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../public/img/logo.svg" type="image">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="container" id="container">
+
+        <div class="form-container login-container">
+            <form id="loginForm">
+                <h1>Login</h1>
+
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="usuario" placeholder="Usuario" name="usuario" required>
+                </div>
+                
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Contraseña" name="password" required>
+                </div>
+
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+
+            <div id="mensaje"></div>
+        </div>
+
+        <div class="form-container register-container">
+            <form id="registroForm">
+                <h1>Sign Up</h1>
+                
+                <input type="text" placeholder="Nombre" id="nombre" name="nombre" required>
+
+                <input type="text" id="apellidos" placeholder="Apellidos" name="apellidos" required>
+                
+                <input type="text" id="register-usuario" placeholder="Usuario" name="usuario" required>
+                
+                <input type="password" id="register-password" placeholder="Contraseña" name="password" required>
+
+                <input type="text" id="ciudad" placeholder="Ciudad" name="ciudad" required>
+
+                <input type="text" id="email" placeholder="Correo Electrónico" name="email" required>
+                
+                <input type="number" id="telefono" placeholder="Telefono" name="telefono" required>
+
+                <input type="text" id="direccion" placeholder="Direccion" name="direccion" required>
+
+                <button type="submit">Registrar</button>
+            </form>
+            <div id="mensaje"></div>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1 class="title"> Posee el control total <br> de tu tiempo </h1>
+                    <p>¿Ya tienes una cuenta?</p>
+                    <button class="ghost" id="register"> Inicie sesión aquí </button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1 class="title"> Comienza tu <br> aventura ahora </h1>
+                    <p>¿Deseas crear una cuenta?</p>
+                    <button class="ghost" id="login"> Regístrate aquí </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginButton = document.getElementById("login");
+        const registersButton = document.getElementById("register");
+        const container = document.getElementById("container");
+
+        loginButton.addEventListener("click", () => {
+            container.classList.add("right-panel-active");
+        })
+
+        registersButton.addEventListener("click", () => {
+            container.classList.remove("right-panel-active");
+        })
+    </script>
+    
+    <script src="./public/script/script.js"></script>
+</body>
+</html>
