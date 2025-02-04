@@ -31,7 +31,7 @@ CustomerSystem es una aplicación de gestión de clientes basada en Node.js, uti
 4. **Configura las variables de entorno**:
    - Crea un archivo `.env` en la raíz del proyecto y completa la configuración:
      ```plaintext
-     PORT=4000
+     PORT=3306
      MYSQL_HOST=localhost
      MYSQL_USER=root
      MYSQL_PASSWORD=<tu-contraseña>
